@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style3.css">
+
+</head>
+<div th:replace="header">...</div>
+
+<body>
+
+
+<div class="row" align="center">
+    <div class="column" align="center">
+        <a href="/addBasket">
+            <img class="href" src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/131913371_853472895196474_759465290638106465_n.png?_nc_cat=106&ccb=2&_nc_sid=ae9488&_nc_ohc=idtbsFdVrAQAX9h-B8C&_nc_oc=AQm9r80Co0T5znj5FuMfeAPFk-qO19DHG3Xxxts-RW1KgQCjzoSZ3o1Z0qkzorBBV54&_nc_ht=scontent-cph2-1.xx&oh=79e90e0921f92e84592e8aec6778d2c2&oe=5FFFD531" alt="Home Jersey" width="350" >
+        </a>
+        <br>
+        <a href="/addBasket">
+            <img class="w3-round" src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/131900492_443131253515791_942300892976384456_n.png?_nc_cat=111&ccb=2&_nc_sid=ae9488&_nc_ohc=Q8EZEvBBtdoAX_EHi6k&_nc_ht=scontent-cph2-1.xx&oh=fa8e8f08a58899698011ba61857ea424&oe=5FFF7BC0" alt="Out Jersey" width="350" >
+        </a>
+</div>
+
+    <div class="column" align="center">
+        <br>
+        <a href="/addBasket">
+            <img class="w3-round" src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/131919515_380699189824095_1313935749478886186_n.png?_nc_cat=101&ccb=2&_nc_sid=ae9488&_nc_ohc=e84fnNtJEGwAX_65YIM&_nc_ht=scontent-cph2-1.xx&oh=5757e67da8f8868ce78db9a3129a32eb&oe=60004347" alt="Mug" width="250">
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="/addBasket">
+            <img class="w3-round" src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/131908065_660998801245477_6886151604341453058_n.png?_nc_cat=104&ccb=2&_nc_sid=ae9488&_nc_ohc=668mzL4RYZgAX9qlh-b&_nc_ht=scontent-cph2-1.xx&oh=ac40101f65b336700b6e70b78d9f4193&oe=60012EE8" alt="Cap" width="250">
+        </a>
+        </div>
+
+        <div class="column2" align="center">
+            <h2>Velkommen til shoppen</h2>
+        <table class="tables" align="center">
+            <br>
+    <thead>
+    <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+
+
+    <tr th:each="item: ${items}">
+
+        <td th:text="${item.getName()}"></td>
+        <td th:text="${item.getPrice()}"></td>
+    </tr>
+    </tbody>
+        </table>
+
+    <br>
+    <br>
+    <br>
+    <h5>Tryk på billederne for at tilføje genstanden til kurv</h5>
+    </div>
+
+</body>
+</html>

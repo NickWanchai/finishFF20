@@ -1,0 +1,22 @@
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Tilføj medarbejdere</title>
+</head>
+<div th:replace="header">...</div>
+
+<body>
+
+<form action="#" th:action="@{/addStaff}" th:object="${staff}" method="post" align="center">
+
+    <p>Navn: <input type="text" th:field="*{name}" required></p>
+    <p>Jobtitel: <input type="text" th:field="*{jobTitel}" required></p>
+    <p>Email: <input type="text" th:field="*{email}" required></p>
+
+    <input type="submit" value="Tilføj" class="btn add2"/>
+</form>
+
+</body>
+</html>

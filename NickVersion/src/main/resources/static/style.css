@@ -1,0 +1,47 @@
+.header {
+    color: cornflowerblue;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: yellow;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Links - ændre farven når man holder over nav baren i toppen */
+.topnav a:hover {
+    background-color: #80000b;
+    color: black;
+}
+
+.bg1 {
+    background-color: rgb(172, 70, 70);
+
+}
+
+
+.card {
+
+    display: inline-block;
+
+
+}
+
+.card-body{
+
+    display: inline-block;
+
+
+}

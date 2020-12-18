@@ -1,0 +1,42 @@
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+
+</head>
+<body>
+
+<div th:replace="header">...</div>
+
+<div class="row" align="center">
+    <div class="column3" align="center">
+
+        <h2>Admin side</h2>
+        <br>
+        <table class="tables2" align="center">
+        <tbody>
+        <td>
+            <form method="GET" action="/adminPlayer">
+                <button type="submit">Adminstrer spillere</button>
+            </form>
+        </td>
+        <td>
+            <form method="get" action="/adminShop">
+                <button type="submit">Adminstrer shop</button>
+            </form>
+        </td>
+        <td>
+            <form method="get" action="/adminStaff">
+                <button type="submit">Adminstrer personale</button>
+            </form>
+        </td>
+        </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

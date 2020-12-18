@@ -1,0 +1,20 @@
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Tilføj shop inventar</title>
+</head>
+<div th:replace="header">...</div>
+<body>
+
+    <form action="#" th:action="@{/addItem}" th:object="${item}" method="post" align="center">
+
+        <p>Name: <input type="text" th:field="*{name}"></p>
+        <p>Price: <input type="number" th:field="*{price}"></p>
+
+
+        <input type="submit" value="Tilføj" class="btn add2"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Players</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<div th:replace="header">...</div>
+
+
+<body>
+
+
+
+<div class="row" align="center">
+    <div class="column" align="center">
+
+        <h2>Spiller Trup</h2>
+        <p>FF20</p>
+
+        <div class="card" tr th:each="player: ${players}" style="width:200px">
+
+
+
+                <img class="card-img-top" src="https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s320/BlueHead.jpg" alt="Card image" style="width:100%">
+
+                <tbody>
+
+                <thead>
+                <tr> Navn: </tr>
+                </thead>
+
+                <tr>
+                    <td th:text="${player.getName()}"></td>
+                </tr>
+
+            <br>
+
+                <thead>
+                <tr>Alder: </tr>
+                </thead>
+
+                <tr>
+                    <td th:text="${player.getAge()}"></td>
+                </tr>
+
+            <br>
+                <thead>
+                <tr>Trøjenummer: </tr>
+                </thead>
+
+                <tr>
+                    <td th:text="${player.getShirtNumber()}"></td>
+                </tr>
+            <br>
+                <thead>
+                <tr>Position: </tr>
+                </thead>
+
+                <tr>
+                    <td th:text="${player.getPosition()}"></td>
+                </tr>
+            <br>
+
+                <thead>
+                <tr>Nationalitet: </tr>
+                </thead>
+
+                <tr>
+                    <td th:text="${player.getNationality()}"></td>
+                </tr>
+
+            </tbody>
+
+        </div>
+    </div>
+
+
+    <div class="column" align="center">
+
+        <h2>FF20 DYNAMITE</h2>
+        <p>Opstilling</p>
+
+            <img class="card-img-top" src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.15752-9/131891822_372721920696967_1015355192087896602_n.png?_nc_cat=108&ccb=2&_nc_sid=ae9488&_nc_ohc=xgaT4GAd36IAX8T3lQ1&_nc_ht=scontent-arn2-2.xx&oh=e59f549132fb61ec230e2ec25c7ecfdf&oe=5FFDD6C3" alt="Card image" style="width:100%">
+
+
+    </div>
+
+    <div class="column" align="center">
+
+        <h1> Træner </h1>
+        <p>Julius Mandas</p>
+
+        <img class="card-img-top" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.15752-9/131642910_2572465689665579_3087510406514682315_n.png?_nc_cat=110&ccb=2&_nc_sid=ae9488&_nc_ohc=mtifQ9EMzNsAX9Mq9Kw&_nc_ht=scontent-arn2-1.xx&oh=94f21c46c6cf06527a6541d88dfeb7f1&oe=6000D0CD" alt="Card image" style="width:100%">
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>

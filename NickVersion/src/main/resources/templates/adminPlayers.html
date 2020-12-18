@@ -1,0 +1,36 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Adminstrer shoppen</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+
+</head>
+<div th:replace="header">...</div>
+<body>
+<div class="row" align="center">
+    <div class="column3" align="center">
+
+        <h2>Adminstrer spillere</h2>
+        <br>
+        <table class="tables2" align="center">
+            <tbody>
+            <td>
+                <form method="GET" action="/addPlayer">
+                    <button type="submit">Tilføj spiller</button>
+                </form>
+            </td>
+            <td>
+                <form method="get" action="/deletePlayer">
+                    <button type="submit">Slet spiller</button>
+                </form>
+            </td>
+            <td>
+                <form method="get" action="/updatePlayer">
+                    <button type="submit">Opdater spillerinfo</button>
+                </form>
+            </td>
+            </tbody>
+        </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../static/style.css">
+    <title>Slet spiller</title>
+</head>
+<div th:replace="header">...</div>
+<body>
+<div class="container">
+<h1>Slet spiller her </h1>
+
+<table class="tables" align="center">
+    <thead>
+    <tr>
+        <th>Spillertrøje</th>
+        <th>Navn</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+        <tr th:each="player: ${players}">
+            <td th:text="${player.getId()}"></td>
+            <td th:text="${player.getName()}"></td>
+            <td>
+                <a th:href="@{/verifyDeletePlayer(id=${player.getId()})}" class="btn btn-del">Slet</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+</body>
+</html>

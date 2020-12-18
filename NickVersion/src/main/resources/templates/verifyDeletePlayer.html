@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Bekræft slet spiller</title>
+</head>
+<body>
+
+<h1>Delete Customer <td th:text="${player.name}"> </td></h1>
+
+<form action="#" th:action="@{/verifyDelete}" method="post">
+    <input type="hidden" th:field="${player.id}"/>
+    <input type="submit" value="Yes" class="btn btn-create"/>
+</form>
+
+<button onclick="window.location.href = 'http://localhost:8080/deletePlayer';">No</button>
+
+
+</body>
+</html>
