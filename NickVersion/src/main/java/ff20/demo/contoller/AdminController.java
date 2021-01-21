@@ -50,22 +50,19 @@ public class AdminController {
     }
 
     @GetMapping("/adminPlayer")
-    public String adminPlayer(){
+    public String adminPlayer() {
         return "adminPlayers";
     }
 
     @GetMapping("/adminShop")
-    public String adminShop(){
+    public String adminShop() {
         return "adminShop";
     }
 
     @GetMapping("/adminStaff")
-    public String adminStaff(){
+    public String adminStaff() {
         return "adminStaff";
     }
-
-
-
 
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class AdminDbRepository implements AdminRepository{
+public class AdminDbRepository implements AdminRepository {
 
     @Autowired
     JdbcTemplate jdbcTemplate;

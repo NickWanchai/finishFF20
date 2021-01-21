@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="style2.css">
 
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,28 +21,29 @@
 <body>
 
 
-
 <div class="card" tr th:each="player: ${players}" style="width:200px">
 
 
-    <img class="card-img-top" src="https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s320/BlueHead.jpg" alt="Card image" style="width:100%">
+    <img class="card-img-top"
+         src="https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s320/BlueHead.jpg"
+         alt="Card image" style="width:100%">
     <div class="card-body">
 
         <tbody>
 
-        <div class ="card1">
+        <div class="card1">
         <thead>
-        <tr> Navn: </tr>
+        <tr> Navn:</tr>
         </thead>
 
         <tr>
             <td th:text="${player.getName()}"></td>
         </tr>
-        </div>
+    </div>
 
-    <div class ="card2">
+    <div class="card2">
         <thead>
-        <tr>Alder: </tr>
+        <tr>Alder:</tr>
         </thead>
 
         <tr>
@@ -51,9 +51,9 @@
         </tr>
     </div>
 
-    <div class ="card3">
+    <div class="card3">
         <thead>
-        <tr>Trøjenummer: </tr>
+        <tr>Trøjenummer:</tr>
         </thead>
 
         <tr>
@@ -61,9 +61,9 @@
         </tr>
     </div>
 
-    <div class ="card4">
+    <div class="card4">
         <thead>
-        <tr>Position: </tr>
+        <tr>Position:</tr>
         </thead>
 
         <tr>
@@ -71,9 +71,9 @@
         </tr>
     </div>
 
-    <div class ="card5">
+    <div class="card5">
         <thead>
-        <tr>Nationalitet: </tr>
+        <tr>Nationalitet:</tr>
         </thead>
 
         <tr>
@@ -86,8 +86,6 @@
 
 </div>
 </div>
-
-
 
 
 </body>

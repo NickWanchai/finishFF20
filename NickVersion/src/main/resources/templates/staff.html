@@ -16,18 +16,20 @@
     <div class="column3" align="center">
         <h2>Medarbejder teamet</h2>
         <br>
-        <div class="card" th:each="staff: ${staffs}" style="width:200px" >
-            <img class="card-img-top" src="https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s320/BlueHead.jpg" alt="Card image" style="width:100%">
+        <div class="card" th:each="staff: ${staffs}" style="width:200px">
+            <img class="card-img-top"
+                 src="https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s320/BlueHead.jpg"
+                 alt="Card image" style="width:100%">
             <tbody>
             <thead>
-        <tr> Navn: </tr>
-        </thead>
+            <tr> Navn:</tr>
+            </thead>
             <tr>
                 <td th:text="${staff.getName()}"></td>
             </tr>
             <br>
             <thead>
-            <tr> Jobtitel: </tr>
+            <tr> Jobtitel:</tr>
             </thead>
             <tr>
                 <td th:text="${staff.getJobTitel()}"></td>
@@ -35,7 +37,7 @@
             <br>
 
             <thead>
-            <tr> E-mail: </tr>
+            <tr> E-mail:</tr>
             </thead>
 
             <tr>

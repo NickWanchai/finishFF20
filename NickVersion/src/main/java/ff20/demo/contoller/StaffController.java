@@ -15,29 +15,29 @@ public class StaffController {
 
     private StaffRepository staffRepository;
 
-    public StaffController(StaffRepository staffRepository){
+    public StaffController(StaffRepository staffRepository) {
         this.staffRepository = staffRepository;
     }
 
     @GetMapping("/staff")
-    public String staff(Model model){
+    public String staff(Model model) {
         model.addAttribute("staffs", staffRepository.findAll());
         return "staff";
     }
 
     @GetMapping("/addStaff")
-    public String addStaff(Model model){
+    public String addStaff(Model model) {
         model.addAttribute("staff", new Staff());
         return "addStaff";
     }
 
     @PostMapping("/addStaff")
-    public String addStaff(HttpServletRequest request){
+    public String addStaff(HttpServletRequest request) {
         String name = request.getParameter("name");
         String jobTitel = request.getParameter("jobTitel");
         String email = request.getParameter("email");
 
-        Staff staff= new Staff(name, jobTitel, email);
+        Staff staff = new Staff(name, jobTitel, email);
         staffRepository.save(staff);
 
         return "redirect:/staff";
@@ -62,8 +62,6 @@ public class StaffController {
         return "redirect:/";
     }
  */
-
-
 
 
 }

@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<h1>Delete Customer <td th:text="${player.name}"> </td></h1>
+<h1>Delete Customer
+    <td th:text="${player.name}"></td>
+</h1>
 
 <form action="#" th:action="@{/verifyDelete}" method="post">
     <input type="hidden" th:field="${player.id}"/>

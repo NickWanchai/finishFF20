@@ -16,56 +16,54 @@ public class PlayerController {
     private PlayerRepository playerRepository;
 
 
-    public PlayerController(PlayerRepository playerRepository){
+    public PlayerController(PlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
     }
 
     @GetMapping("/players")
-    public String players(Model model){
+    public String players(Model model) {
         model.addAttribute("players", playerRepository.findAll());
         return "players";
     }
 
     @GetMapping("/addPlayer")
-    public String addPlayer(Model model){
+    public String addPlayer(Model model) {
         model.addAttribute("player", new Player());
         return "addPlayer";
     }
 
     @PostMapping("/addPlayer")
-    public String addPlayer(HttpServletRequest request){
+    public String addPlayer(HttpServletRequest request) {
         int shirtNumber = Integer.parseInt(request.getParameter("shirtNumber"));
         int age = Integer.parseInt(request.getParameter("age"));
         String name = request.getParameter("name");
         String position = request.getParameter("position");
         String nationality = request.getParameter("nationality");
 
-        Player player= new Player(shirtNumber, age, name, position, nationality);
+        Player player = new Player(shirtNumber, age, name, position, nationality);
         playerRepository.save(player);
 
         return "redirect:/players";
     }
 
     @GetMapping("/deletePlayer")
-    public String deletePlayer(Model model){
+    public String deletePlayer(Model model) {
         model.addAttribute("players", playerRepository.findAll());
         return "deletePlayer";
     }
 
     @GetMapping("/verifyDeletePlayer")
-    public String verifyDelete(@RequestParam("id") long id, Model model){
+    public String verifyDelete(@RequestParam("id") long id, Model model) {
         model.addAttribute("player", playerRepository.findById(id));
         return "verifyDeletePlayer";
     }
 
     @PostMapping("/verifyDeletePlayer")
-    public String verifyDelete(HttpServletRequest request){
+    public String verifyDelete(HttpServletRequest request) {
         String id = request.getParameter("id");
         playerRepository.deleteById(Long.valueOf(id));
         return "redirect:/";
     }
-
-
 
 
 }

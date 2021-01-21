@@ -23,6 +23,7 @@ public class Staff {
         this.jobTitel = jobTitel;
         this.email = email;
     }
+
     public Staff(String name, String jobTitel, String email) {
         this.name = name;
         this.jobTitel = jobTitel;

@@ -1,5 +1,4 @@
-
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../static/style.css">
@@ -10,16 +9,16 @@
 
 <body>
 
-    <form action="#" th:action="@{/addPlayer}" th:object="${player}" method="post" align="center">
+<form action="#" th:action="@{/addPlayer}" th:object="${player}" method="post" align="center">
 
-        <p>Trøjenummer: <input type="number" th:field="*{shirtNumber}"></p>
-        <p>Age: <input type="number" th:field="*{age}"></p>
-        <p>Spiller Navn: <input type="text" th:field="*{name}" required></p>
-        <p>Position: <input type="text" th:field="*{position}" required></p>
-        <p>Nationalitet: <input type="text" th:field="*{nationality}" required></p>
+    <p>Trøjenummer: <input type="number" th:field="*{shirtNumber}"></p>
+    <p>Age: <input type="number" th:field="*{age}"></p>
+    <p>Spiller Navn: <input type="text" th:field="*{name}" required></p>
+    <p>Position: <input type="text" th:field="*{position}" required></p>
+    <p>Nationalitet: <input type="text" th:field="*{nationality}" required></p>
 
-        <input type="submit" value="Tilføj" class="btn add2"/>
-    </form>
+    <input type="submit" value="Tilføj" class="btn add2"/>
+</form>
 
-    </body>
+</body>
 </html>

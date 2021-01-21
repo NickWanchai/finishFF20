@@ -14,15 +14,17 @@ public class Item {
     private String name;
     private int price;
 
-    public Item(){}
+    //inventar
+    public Item() {
+    }
 
-    public Item(long id, String name, int price){
+    public Item(long id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public Item(String name, int price){
+    public Item(String name, int price) {
         this.name = name;
         this.price = price;
     }

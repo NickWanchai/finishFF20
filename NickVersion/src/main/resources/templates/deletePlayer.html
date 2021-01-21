@@ -1,5 +1,5 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../static/style.css">
@@ -8,17 +8,17 @@
 <div th:replace="header">...</div>
 <body>
 <div class="container">
-<h1>Slet spiller her </h1>
+    <h1>Slet spiller her </h1>
 
-<table class="tables" align="center">
-    <thead>
-    <tr>
-        <th>Spillertrøje</th>
-        <th>Navn</th>
-    </tr>
-    </thead>
+    <table class="tables" align="center">
+        <thead>
+        <tr>
+            <th>Spillertrøje</th>
+            <th>Navn</th>
+        </tr>
+        </thead>
 
-    <tbody>
+        <tbody>
 
         <tr th:each="player: ${players}">
             <td th:text="${player.getId()}"></td>
@@ -28,8 +28,8 @@
             </td>
         </tr>
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
 </div>
 </body>
