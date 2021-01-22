@@ -13,7 +13,7 @@ class DemoApplicationTests {
 
     @Test
     void calculate(){
-        assertEquals(2, 4+1);
+        assertEquals(2, 1+1);
     }
 
 
